@@ -1,0 +1,37 @@
+/*
+1. CSS flow as the waterfall rule mean it excute from to down value. 
+
+2. CSS also give more importance Class as compare to normal element. which mean if any element color = red and that same element have a class and that class have color = blue then CSS will give the color = blue it give more inportance to class
+
+
+*/
+
+
+
+/*This one is univarsal which mean it will be applyed to everyone in the page*/
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+/*this is a normal type of selector which is element */
+body{
+    font-size: 20px;
+}
+p{
+    color: brown;
+}
+h1,h2{
+    color: blue;
+}
+p span{
+    text-transform: uppercase;
+    background-color: red;
+}
+/*This is a class type selector which can use in different elemetn with same name class share can have same name*/
+.gray{
+    color: gray;
+}
+/*This is a ID type selector which is unique or differnt form other ID it can't be same as other.*/
+
+#second{
+    font-style: italic;
+}
