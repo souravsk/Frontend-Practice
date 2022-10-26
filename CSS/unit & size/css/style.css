@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh; /*it give the view of the content*/
+}
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem; /*rem = 16*rem what it mean is rem multiple with the base pixel size most of the time base is of 16pixel */
+    padding: 0.5em; /*em = rem*em which mean it multipli the rem size*/
+}
+
+p{
+    font-size: 20px;
+    width: 40ch; /*it is used when you want fix amount of charater in line*/    
+}
