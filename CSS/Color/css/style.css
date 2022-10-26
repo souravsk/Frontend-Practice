@@ -3,5 +3,9 @@ body{
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.5;
     background-color: papayawhip;
-    color: black;
+    color: rgb(0,0,0); /*we can create color by changing the rgb value*/
+}
+
+p{
+    color: rgba(0, 0, 0,0.8); /*This alpha is use to change the opactie of the test*/
 }
