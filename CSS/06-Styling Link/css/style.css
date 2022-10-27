@@ -7,5 +7,20 @@ body{
 }
 
 a{
-    text-decoration: underline;
+    text-decoration: none; /* this will remove the underline from the links  */
+    cursor: pointer; /* this is for the pointer hand which we see when we hover on a links */
+    color: #000;
+}
+
+/* this are called as pseudo classes */
+
+/* a:visited{
+    color: purple; /* when we click on a link and comeback to it. it will show as on purple color 
+} */
+a:hover{
+    color: dodgerblue;
+}
+
+a:active{
+    color: red;
 }
