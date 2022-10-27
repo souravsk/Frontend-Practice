@@ -1,6 +1,11 @@
+/* This is the font link which is diretly imported into the css file */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
     padding: 10%;
     font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*
@@ -9,3 +14,14 @@ this will inherit the font from the body
 input,button{
     font:inherit;
 } */
+
+p{
+    text-decoration:none;
+    text-transform: capitalize;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    word-spacing: 0.10em;
+    font-style: italic;
+}
