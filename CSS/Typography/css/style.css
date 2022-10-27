@@ -1,0 +1,11 @@
+body{
+    padding: 10%;
+    font-size: 2rem;
+}
+
+/*
+this will inherit the font from the body
+
+input,button{
+    font:inherit;
+} */
