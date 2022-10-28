@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+nav{
+    border: 2px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+h2{
+    padding: 1rem;
+    background-color: gold;
+    border-radius: 2rem 2rem 0 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    border-top: 2px solid #333;
+}
+
+li a{
+    display: block; /* a tag is an inline element so we are changing it into block level element so it have 100% width */
+}
+
+li a,
+li a:visited{
+    text-decoration: none;
+    color: #333;
+}
+
+li a:hover,
+li a:focus{
+    background: #333;
+    color: whitesmoke;
+}
+
+li:last-child a{ /* this mean this will only change the last li in ul */
+    border-radius: 0 0 2rem 2rem;
+}
