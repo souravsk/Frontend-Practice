@@ -9,3 +9,28 @@ body{
 ol{
     list-style-type: lower-roman;
 }
+
+ul{
+    list-style-type:square;
+    text-align: center; /* it will only align the text not the bulltes */
+    list-style-position: inside; /* this will make the bullte point follow the text */
+    color: blueviolet;
+    line-height: 1.6;
+    list-style-image: url("../image/heart-with-checkmark.png");
+    list-style: square url("../image/heart-with-checkmark.png") inside;/* the square will be used when the image will not load */
+}
+
+ul li:nth-child(even){
+    color: red; /* this will change the color of even postion item */
+}
+
+/* : this is called pesudo class it is used when we need to call pesudo class
+    :: this is called pesudo elemets and all pesudo element should start with :: this
+*/
+
+/* ul ::marker{
+    color: red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "Only 5$ ";
+} */
