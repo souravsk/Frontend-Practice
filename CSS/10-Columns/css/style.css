@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-size: 1.4rem;
+    font-family: "Roboto",sans-serif;
+}
+
+.columns{
+   /*  column-count: 4;
+    column-width: 200px; */
+    columns: 4 250px;
+    column-rule: 3px solid #333;
+    column-gap: 3rem;
+}
+
+.columns p{
+    margin-top: 0;
+}
+
+.columns h2{
+    background-color: #333;
+    margin-top: 0;
+    color: #fff;
+    padding: 1rem;
+    break-inside: avoid;/* it let not to split into two different picess so without this it can be in two different columns and that will create problem*/
+}
+.columns .quote{
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
