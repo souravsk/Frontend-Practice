@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.4rem;
+    min-height: 200vh;
+    font-family: "Roboto",sans-serif;
+}
+
+.outer-container{
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+.inner-container{
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 150px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    padding: 1rem;
+}
+
+.absolute{ /* absolute will always respond to relative the most closed position = relative is it will relate to that  */
+    background-color: #00f;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.relative{ /* relative is relate to the same element where is being used it will relate to that element or container */
+    background-color: red;
+    position: relative;
+    top: 60px;
+    left: 20px;
+
+}
+
+.fixed{ /* as the same sayes it will be fixed to the position it will not change it's even you scroll the page */
+    background-color: green;
+    position: fixed;
+    top: 100px;
+}
+
+.sticky{ /* it will stick to the position it it. the main different between fixed and sticky is the sticky did not go out of it's container or the given area  */
+    background-color: #000;
+    position: sticky;
+    top: 0;
+}
+
+/* Second Section of  the code  */
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+}
+
+.blue{background-color: #00f;}
+.red{background-color: #f00;}
+.green{background-color: green;}
+
+header, footer{
+    color: #fff;
+    text-align: center;
+    height: 100px;
+    
+}
+
+header{
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+}
+
+footer{
+    background-color: #000;
+    position: sticky;
+    bottom: 0;
+    font-size: 3rem;
+    width: 100%;
+}
+
+a:visited{
+    color: #fff;
+}
+
+.social {
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top:30%;
+    left: 0;
+    z-index: 1;
+}
