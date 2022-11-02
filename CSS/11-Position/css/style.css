@@ -62,6 +62,10 @@ body{
 
 /* Second Section of  the code  */
 
+html{
+    scroll-behavior: smooth;
+}
+
 section{
     height: 100vh;
 }
@@ -85,7 +89,23 @@ header{
 
 footer{
     background-color: #000;
-    position: fixed;
+    position: sticky;
     bottom: 0;
+    font-size: 3rem;
     width: 100%;
+}
+
+a:visited{
+    color: #fff;
+}
+
+.social {
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top:30%;
+    left: 0;
+    z-index: 1;
 }
