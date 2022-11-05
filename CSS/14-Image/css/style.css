@@ -6,7 +6,47 @@
     box-sizing: border-box;
 }
 
+img{
+    display: block; /* img are inline we need to make it block so tha it will take the whole given space. without block there will be spaace in the bottom */
+}
+
 body{
     font-family: "Nunito",sans-serif;
     min-height: 100vh;
+}
+
+.hero{
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+}
+
+.h1{
+    font-size: 500%;
+}
+
+.progile-img-figure{
+    width: 35%; /* this will create a shot of container size */
+}
+
+.progile-img-figure img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example{
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+.example img{
+    width: 25%; /* by giveing width in persent we have made the image responsive */
+    height: auto;
 }
