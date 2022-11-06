@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+/* Begin Reset */
+
 *{
     margin: 0;
     padding: 0;
@@ -10,9 +12,37 @@ img{
     display: block; /* img are inline we need to make it block so tha it will take the whole given space. without block there will be spaace in the bottom */
 }
 
+/* End Reset */
+
+/* Utitlity classes*/
+
+.nowrap{
+    white-space: nowrap;
+}
+
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+/*End Utility classes*/
 body{
     font-family: "Nunito",sans-serif;
     min-height: 100vh;
+    background-color: aliceblue;
+   /*  background-image:url('../img/bubbles.png'),
+                     linear-gradient(to left,steelblue, #fff); /* with this we can set gradient background and also can set position 
+    background-repeat: repeat-y, no-repeat; /* both of the are respect to the previes background-image the first one for image  and the other one for the gradiant 
+    background-position: right center;
+    background-size: 20%, auto  */              
+}
+
+.contanier{
+    background-color: rgb(251, 210, 156);
+    background-image: url('../img/map-2176x1451.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero{
@@ -22,10 +52,16 @@ body{
     justify-content: flex-start;
     align-items: center;
     gap:30px;
+    background-color: hsla(0, 0%, 0%, 0.40); /* this one is adding dark color on the container with opacite */
 }
 
 .h1{
     font-size: 500%;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px black;/* this will add shodow in X Y Z  */
+    /* background-color: hsla(0, 0%, 0%, 0.40);
+    padding: 0.25rem;
+    border-radius: 10px; */
 }
 
 .progile-img-figure{
@@ -36,7 +72,7 @@ body{
     width: 100%;
     height: auto;
     min-width: 100px;
-    border: 5px double gray;
+    border: 3px solid rgba(255, 252, 252, 0.527);
     border-radius: 50%;
 }
 
@@ -49,4 +85,16 @@ body{
 .example img{
     width: 25%; /* by giveing width in persent we have made the image responsive */
     height: auto;
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url('../img/scenic-2200x1331.png');
+    background-size: 100%;
+    text-transform: uppercase;
+    -webkit-background-clip: text; /* this will mask the image with the text */
+    background-clip: text; /* we need only got firefox brower becaouse it will not supput that webkit */
+    color: rgba(0, 0, 0, 0.205);
 }
