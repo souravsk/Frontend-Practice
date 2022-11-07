@@ -57,5 +57,47 @@ footer{
 
 /*For Small Devies*/
 @media screen and (min-width: 567px) {
-    
+    body{
+        background-color: green;
+        background-image: radial-gradient(white, green);
+    }
+    nav{
+        display: none;
+    }
+}
+
+/* For Media */
+@media screen and (min-width: 768px) {
+    body{
+        background-color: gold;
+        background-image: radial-gradient(white, gold);
+    }
+}
+
+/* For Large */
+@media screen and (min-width: 992px) {
+    body{
+        background-color: red;
+        background-image: radial-gradient(white, red);
+    }
+}
+
+/* For XL */
+@media screen and (min-width: 1200px) {
+    body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(white, rebeccapurple);
+    }
+}
+/* For mobile devies landscape */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body{
+        background-color: magenta;
+        background-image: radial-gradient(white, magenta);
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+    nav{ display: none;}
 }
