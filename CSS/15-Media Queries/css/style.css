@@ -9,4 +9,53 @@
 body{
     font: "Nunito",sans-serif;
     min-height: 100vh;
+    background-color: steelblue;
+    background-image: radial-gradient(whitesmoke, steelblue);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Queries
+    it is used to make the webpage responsive it will help the webpage to change the page stuctur as per the device size
+    
+    Syntex
+    @media media type and (condition: breakpoint){
+        //CSS Rule
+    }
+*/
+
+header, nav, main, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer{
+    position: sticky;
+    background-color: rgb(21, 45, 97);
+    color: whitesmoke;
+}
+header{
+    top: 0;
+}
+
+nav{
+    background-color: #fff;
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 2px solid rgb(5, 23, 56);
+}
+
+main{
+    flex-grow: 1;
+}
+
+footer{
+    bottom: 0;
+}
+
+/*For Small Devies*/
+@media screen and (min-width: 567px) {
+    
 }
