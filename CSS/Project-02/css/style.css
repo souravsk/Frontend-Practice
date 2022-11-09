@@ -119,38 +119,55 @@ footer{
     }
 }
 
-/* For Media */
+/* For Medium */
 @media screen and (min-width: 768px) {
-    body{
-        background-color: gold;
-        background-image: radial-gradient(white, gold);
+    nav{
+        display: none;
+    }
+    .card{
+        width: min(100%, 325px);
+    }
+    .card figure{
+        flex-flow: column-reverse;
+    }
+    .card p{
+        margin-top: 1rem;
     }
 }
 
 /* For Large */
 @media screen and (min-width: 992px) {
-    body{
-        background-color: red;
-        background-image: radial-gradient(white, red);
+    .card{
+        width: min(100%, 400px);
+    }
+    .card:nth-child(2){
+        order: -1;
     }
 }
 
 /* For XL */
 @media screen and (min-width: 1200px) {
-    body{
-        background-color: rebeccapurple;
-        background-image: radial-gradient(white, rebeccapurple);
+    .card{
+        width: min(calc(33% - 1rem), 500px); /* calc funtion let's mix other math function  */
     }
 }
 /* For mobile devies landscape */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-    body{
-        background-color: magenta;
-        background-image: radial-gradient(white, magenta);
-    }
-
-    h1, h2 {
+    h1 {
         font-size: 1.5rem;
     }
     nav{ display: none;}
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card{
+        width: min(calc(33% - 0.25rem), 200px);
+    }
+    .card figcaption, .card p{
+        font-size: 1.5rem;
+
+    }
 }
