@@ -6,10 +6,18 @@
     box-sizing: border-box;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html{scroll-behavior: smooth;} /* this will the auto scrolling smooth  */
+
 body{
     font: "Nunito",sans-serif;
     min-height: 100vh;
-    background-color: steelblue;
+    background-color: #4682b4;
     background-image: radial-gradient(whitesmoke, steelblue);
     display: flex;
     flex-direction: column;
@@ -24,17 +32,11 @@ body{
     }
 */
 
-header, nav, main, footer{
-    display: grid;
-    place-content: center;
-    grid-template-columns: 100%;
-    text-align: center;
-}
-
 header, footer{
     position: sticky;
     background-color: rgb(21, 45, 97);
     color: whitesmoke;
+    text-align: center;
 }
 header{
     top: 0;
@@ -42,27 +44,78 @@ header{
 
 nav{
     background-color: #fff;
-    color: black;
     padding: 0.5rem;
     border-bottom: 2px solid rgb(5, 23, 56);
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a, nav a:visited{
+    color: #000;
+}
+
+nav a:hover, nav a:focus{
+    color: hsla(0, 0%, 20%, 0.6);
 }
 
 main{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 footer{
     bottom: 0;
 }
 
+/* Profile card*/
+
+.card{
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: #3b7bc5;
+    border: 1.5px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img{
+    border: 5px double #333;
+    border-radius: 5%;
+}
+
+.card figcaption{
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+
 /*For Small Devies*/
 @media screen and (min-width: 567px) {
-    body{
-        background-color: green;
-        background-image: radial-gradient(white, green);
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
     }
-    nav{
-        display: none;
+
+    .card{
+        width: min(100%, 400px);
+    }
+    .card:last-child{
+        order: -1;
     }
 }
 
