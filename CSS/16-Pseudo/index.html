@@ -1,23 +1,47 @@
-<!-- A pseudo selectors inclued both pseudo class and pseudo element. The different between a pseudo class and pseudo are
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="">
+        <h1>Our Staff</h1>
+        <nav>
+            <a href="#profile1">Joe</a>
+            <a href="#profile2">Matt</a>
+            <a href="#profile3">Jane</a>
+        </nav>
+    </header>
+    <main>
+        <article class="card" id="profile1">
+            <figure>
+                <img src="img/profile1-500x500.png" alt="joe Coder" width="500" height="500">
+                <figcaption>Joe Coder</figcaption>
+            </figure>
+            <p><q>I code Stuff</q></p>
+        </article>
+        <article class="card" id="profile2">
+            <figure>
+                <img src="img/profile2-500x500.png" alt="Matt designer" width="500" height="500">
+                <figcaption>Matt designer</figcaption>
+            </figure>
+            <p><q>I Design Stuff</q></p>
+        </article>
+        <article class="card" id="profile3">
+            <figure>
+                <img src="img/profile3-500x500.png" alt="Jane DevRel" width="500" height="500">
+                <figcaption>Jane DevRel</figcaption>
+            </figure>
+            <p><q>I teach Stuff</q></p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; Acme Co.</p>
+    </footer>
+</body>
+</html>
 
-    Pseudo class is selector selectes element that are specific state. the most popular selector is hover 
-
-    Ex:- .card:nth-child(even){
-        this will make chanage in the even element which have card class
-    }
-
-    .card:img:not([alt]){
-        this will show your changes in that image which don't have the alt tag init you can also use it without not function
-    }
-
-    pseudo element is same but thay act like html element into you document and  it use :: collen 
-
-    Ex:- .card figcaption::after{
-        content:'hello';
-        this  'hello' will be just next to the whatever is in the figcaption section 
-    }
-
-    .card figcaption::befor{
-        this is just like othe one but it will put you content befor the figcaption
-    }
--->

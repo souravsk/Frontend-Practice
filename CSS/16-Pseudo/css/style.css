@@ -1,3 +1,26 @@
+/* A pseudo selectors inclued both pseudo class and pseudo element. The different between a pseudo class and pseudo are
+
+    Pseudo class is selector selectes element that are specific state. the most popular selector is hover 
+
+    Ex:- .card:nth-child(even){
+        this will make chanage in the even element which have card class
+    }
+
+    .card:img:not([alt]){
+        this will show your changes in that image which don't have the alt tag init you can also use it without not function
+    }
+
+    pseudo element is same but thay act like html element into you document and  it use :: collen 
+
+    Ex:- .card figcaption::after{
+        content:'hello';
+        this  'hello' will be just next to the whatever is in the figcaption section 
+    }
+
+    .card figcaption::befor{
+        this is just like othe one but it will put you content befor the figcaption
+    }
+*/
 @import url('https://fonts.googleapis.com/csly=Nunito&display=swap');
 /* Reset*/
 * {
