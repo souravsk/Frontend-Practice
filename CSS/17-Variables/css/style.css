@@ -6,10 +6,17 @@
     box-sizing: border-box;
 }
 
+/* Variaable*/
+:root{
+    /* Color*/
+    --BGCOLOR: steelblue;   /* there are in capital just to show there varibale */
+    --ALT-BGCOLOR:rgb(10, 34, 85);
+}
+
 body{
     font: "Nunito",sans-serif;
     min-height: 100vh;
-    background-color: steelblue;
+    background-color: var(--BGCOLOR);
     background-image: radial-gradient(whitesmoke, steelblue);
     display: flex;
     flex-direction: column;
@@ -33,7 +40,7 @@ header, nav, main, footer{
 
 header, footer{
     position: sticky;
-    background-color: rgb(21, 45, 97);
+    background-color: var(--BGCOLOR);
     color: whitesmoke;
 }
 header{
