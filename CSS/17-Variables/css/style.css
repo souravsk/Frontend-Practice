@@ -8,13 +8,17 @@
 
 /* Variaable*/
 :root{
+    /* Font */
+    --FF:"Nunito",sans-serif;
+    --FS:1.5rem;
+    --FS-XL:3rem;
     /* Color*/
     --BGCOLOR: steelblue;   /* there are in capital just to show there varibale */
     --ALT-BGCOLOR:rgb(10, 34, 85);
 }
 
 body{
-    font: "Nunito",sans-serif;
+    font: var(--FF) var(--FS);
     min-height: 100vh;
     background-color: var(--BGCOLOR);
     background-image: radial-gradient(whitesmoke, steelblue);
@@ -40,7 +44,7 @@ header, nav, main, footer{
 
 header, footer{
     position: sticky;
-    background-color: var(--BGCOLOR);
+    background-color: var(--ALT-BGCOLOR);
     color: whitesmoke;
 }
 header{
