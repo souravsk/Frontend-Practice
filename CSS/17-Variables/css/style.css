@@ -15,6 +15,11 @@
     /* Color*/
     --BGCOLOR: steelblue;   /* there are in capital just to show there varibale */
     --ALT-BGCOLOR:rgb(10, 34, 85);
+    /* Square */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);   
+    /* Genral */
+    --SHADOWS: 0 6px 5px -5px #000;
 }
 
 body{
@@ -35,7 +40,7 @@ body{
     }
 */
 
-header, nav, main, footer{
+header, nav, footer{
     display: grid;
     place-content: center;
     grid-template-columns: 100%;
@@ -56,59 +61,37 @@ nav{
     color: black;
     padding: 0.5rem;
     border-bottom: 2px solid rgb(5, 23, 56);
+    box-shadow: var(--SHADOWS);
 }
 
 main{
     flex-grow: 1;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vm, 15px);
 }
 
 footer{
     bottom: 0;
 }
 
-/*For Small Devies*/
-@media screen and (min-width: 567px) {
-    body{
-        background-color: green;
-        background-image: radial-gradient(white, green);
-    }
-    nav{
-        display: none;
-    }
+/* Features */
+
+.square--highlight{
+    --SQUARE-BGCOLOR: cornflowerblue;
 }
 
-/* For Media */
-@media screen and (min-width: 768px) {
-    body{
-        background-color: gold;
-        background-image: radial-gradient(white, gold);
-    }
-}
-
-/* For Large */
-@media screen and (min-width: 992px) {
-    body{
-        background-color: red;
-        background-image: radial-gradient(white, red);
-    }
-}
-
-/* For XL */
-@media screen and (min-width: 1200px) {
-    body{
-        background-color: rebeccapurple;
-        background-image: radial-gradient(white, rebeccapurple);
-    }
-}
-/* For mobile devies landscape */
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-    body{
-        background-color: magenta;
-        background-image: radial-gradient(white, magenta);
-    }
-
-    h1, h2 {
-        font-size: 1.5rem;
-    }
-    nav{ display: none;}
+.square{
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
 }
