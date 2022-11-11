@@ -22,6 +22,15 @@
     --SHADOWS: 0 6px 5px -5px #000;
 }
 
+@media (prefers-color-scheme: dark){ /* this is how you make a dark or light theme for your website and it also change as per system theme */
+    :root{
+        --BGCOLOR:#000;
+        --ALT-BGCOLOR: #333;
+        --RADIAL-COLOR: rgb(217,217,217);
+        --SQUARE-BGCOLOR:rgb(129, 219, 107);
+    }
+}
+
 body{
     font: var(--FF) var(--FS);
     min-height: 100vh;
