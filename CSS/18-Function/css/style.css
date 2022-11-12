@@ -16,15 +16,19 @@
     /* Color*/
     --BGCOLOR: steelblue;   /* there are in capital just to show there varibale */
     --ALT-BGCOLOR:rgb(10, 34, 85);
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR:whitesmoke;
+    --DARK-COLOR:#000;
     /* Square */
     --SQUARE-BGCOLOR: papayawhip;
     --SQUARE-SIZE: max(150px, 20vw);   
     /* Genral */
-    --SHADOWS: 0 6px 5px -5px #000;
-    --PADDING: 15px;
+    --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+    --BORDERS:2px solid var(--DARK-COLOR);
+    --PADDING: 0.5em;
 }
 
-@media (prefers-color-scheme: dark){ /* this is how you make a dark or light theme for your website and it also change as per system theme */
+@media (prefers-color-scheme: light){ /* this is how you make a dark or light theme for your website and it also change as per system theme */
     :root{
         --BGCOLOR:#000;
         --ALT-BGCOLOR: #333;
@@ -94,13 +98,40 @@ main section{
 main aside {
     background-color: hsla(0, 4%, 10%, 0.596);
     color: var(--LIGHT-COLOR);
-    font-size: var(--FS);
+    font-size: var(--FS-SM);
     font-style: italic;
     padding: var(--PADDING);
 }
 
+.content{
+    margin-top: 20px;
+}
+
+.tooltip{
+    border-bottom: 1px dashed orange;
+    position: relative;
+}
+
+.tooltip:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--DARK-COLOR);
+    padding: var(--PADDING);
+    border-radius:15px ;
+}
+
 footer{
     bottom: 0;
+}
+
+a:any-link{ /*  this will be applyed to any link it will be for visited link and not visited link too */
+    color: firebrick;
+}
+a:hover, a:focus{
+    /* opacity: .8; */
+    filter: brightness(150%);
 }
 
 /* Features */
