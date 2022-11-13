@@ -34,68 +34,66 @@ div {
   place-content: center;
 }
 
-div:first-child {
+/* transform help to move the element in X, Y, and Z axis */
+
+div:first-child{
   background-color: dodgerblue;
-  /* transform: translateX(-50%); */
-  /* transform: rotateX(180deg); */
-  /* transform: scaleX(120%); */
-  /* transform: skewX(-10deg); */
+ /*  transform: translateX(50%) */
+ /* transform: rotateX(180deg); */
+ /* transform: scaleX(130%); */
+ /* transform: skewX(-10deg); */ /* it make the elemete more like italic */
 }
-
-div:nth-child(2) {
+div:nth-child(2){
   background-color: yellow;
-  /* transform: translateY(-2rem); */
-  /* transform: rotateY(180deg); */
-  /* transform: scaleY(120%); */
-  /* transform: skewY(10deg); */
+ /*  transform: translateY(-40%); */
+ /* transform: rotateY(49deg); */
+ /* transform: scaleY(130%); */
+/*  transform: skewY(-10deg); */
 }
-
-div:last-child {
+div:nth-child(3){
   background-color: limegreen;
-  /* transform: translate(100%, -5rem); */
-  /* transform: rotate(78deg); */
-  /* transform: scale(50%, 50%); */
-  /* transform: skew(-10deg, -10deg); */
+ /*  transform: translate(100%, -2rem);  */
+ /* transform: rotate(67deg); */
+ /* transform: scale(50%, 50%); */
+/*  transform: skew(-10deg, -10deg); */
 }
 
-div:hover {
+/* Transition is use to make a transition on element just like we use in ppt or in video */
+
+div:hover{
   background-color: midnightblue;
-  /* transition-property: background-color, transform;
-  transition-duration: 2s, 3s;
-  transition-delay: 0.5s; 
-  transition-timing-function: linear;*/
-  transition: all 2s 0.5s;
+  transition-property: background-color transform;
+  transition-duration: 2s ;
+  transition-delay: 0.1s;
+  transition-timing-function: ease; /* it will start the animeaion slow then faster it then again get slow at the end */
 }
 
-div:last-child:hover {
+div:last-child:hover{
   transform: rotate(180deg);
 }
 
-.animate {
-  /* animation-name: slide;
+.animate{
+  animation-name: slide;
   animation-duration: 5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   animation-delay: 1s;
-  animation-iteration-count: 2;
-  animation-direction: normal;
-  animation-fill-mode: forwards; */
-  animation: 5s ease-in-out 1s 2 normal forwards slide;
+  animation-iteration-count: 5;
 }
 
 @keyframes slide {
-  0% {
+  0%{ /* this mean at the begging of the animation */
     transform: translateX(0);
   }
 
-  33% {
-    transform: translateX(300px) rotate(180deg);
+  30%{
+    transform: translateX(600px) rotate(180deg);
   }
 
-  66% {
-    transform: translateX(-300px) rotate(-180deg);
+  60%{
+    transform: translateX(-600px) rotate(-180deg);
   }
 
-  100% {
+  100%{
     transform: translateX(0);
     background-color: rebeccapurple;
   }
