@@ -26,3 +26,7 @@ header {
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
 }
+
+.header-title-line{
+    
+}
