@@ -30,9 +30,17 @@ input, button, textarea{
     /* COLOR */
     --BGCOLOR: orange;
     --BGCOLOR-FADE: rgb(252, 220, 160);
-    --BGIMAGE: linear-gradient(to bottom, var(var(--BGCOLOR), var(var(--BGCOLOR-FADE))));
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR:#FFF;
     --FONT-COLOR:#000;
+    --BORDER-COLOR: #333;
+    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --LINK-COLOR:#000;
+    --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+    --LINK-ACTIVE: orange;
+
+    /* BORDERS */
+    --BORDER: 1px solid var(--BORDER-COLOR)
 }
 
 /* UTILITY Classes */
@@ -48,3 +56,54 @@ input, button, textarea{
 .center{
     text-align: center;
 }
+
+/* GENERAL Style */
+
+html{
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family:var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+}
+
+body{
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: var(--BORDER);
+    border-right: var(--BORDER);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+
+h1, h2, h3{
+    font-family: var(--FF-HEADINGS);
+    letter-spacing: 0.1em;
+}
+
+h2, h3{
+    margin-bottom: 1em;
+    color: var(--HIGHLIGHT-COLOR);
+}
+
+p{
+    line-height: 1.5;
+}
+
+a:any-link{
+    color: var(--LINK-COLOR);
+
+}
+
+a:hover, a:focus-visible{
+    color: var(--LINK-HOVER);
+}
+
+a:active{
+    color: var(--LINK-ACTIVE);
+}
+
+/* HEADER */
+
