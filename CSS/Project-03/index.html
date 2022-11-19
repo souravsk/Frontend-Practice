@@ -2,6 +2,7 @@
 <htm>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Sourav Kumar">
         <meta name="description" content="The official website for the littel Taco Shop">
         <title>The Little Taco Shop</title>
@@ -10,33 +11,36 @@
     </head>
     
     <body>
-        <header>
-            <h1>Welcome to The Little Taco Shop</h1>
-            <nav>
-                <ul>
+        <header class="header">
+            <h1 class="header__h1">Welcome to The Little Taco Shop</h1>
+            <nav class="header__nav">
+                <ul class="header__ul">
                     <li>
-                        <a href="#about">About <abbr title="The Little Taco Shop">LTS</abbr></a>
+                        <a href="#menu">Menu</a>
                     </li>
                     <li>
-                        <a href="#menu">Our Menu</a>
+                        <a href="hours.html">Hours</a>
                     </li>
                     <li>
-                        <a href="hours.html">Store Hours</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="about.html">About</a>
                     </li>
                 </ul>
             </nav>
+        </header>
 
+        <section class="hero">
+            <h2 class="hero__h2">Bienvenidos!</h2>
             <figure>
-                <img src="image/tacos_and_drink_400x267.png" alt="Tacos and a Drink" title="we love tacos!" width="400" height="267">
-                <figcaption>
+                <img src="image/tacos_and_drink_1000x667.png" alt="Tacos and a Drink" title="we love tacos!" width="1000" height="667">
+                <figcaption class="offscreen">
                     Tacos and a Drink
                 </figcaption>
             </figure>
-        </header>
-        <hr>
+        </section>
+
         <main>
             
             <article id="about">
