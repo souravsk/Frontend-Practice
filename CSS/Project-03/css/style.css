@@ -38,9 +38,21 @@ input, button, textarea{
     --LINK-COLOR:#000;
     --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
     --LINK-ACTIVE: orange;
+    --HEADER-BGCOLOR:#000;
+    --HEADER-COLOR:#FFF;
+    --NAV-BGCOLOR:#FFF;
+    --HERO-COLOR:#FFF;
+    --HERO-BGCOLOR:rgba(51, 178, 51, 0.75);
 
     /* BORDERS */
-    --BORDER: 1px solid var(--BORDER-COLOR)
+    --BORDER: 1px solid var(--BORDER-COLOR);
+
+    /* STANDER PADDING */
+    --PADDING-TB:0.25em;
+    --PADDING-SIDE:2.5%;
+
+    /* STANDER MARGIN */
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
 }
 
 /* UTILITY Classes */
@@ -106,4 +118,66 @@ a:active{
 }
 
 /* HEADER */
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header__h1{
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.header__nav{
+    background-color: var(--NAV-BGCOLOR);
+    border-bottom: var(--BORDER);
+    font-weight: bold;
+    box-shadow: 0 6px 5px -5px var(--BORDER-COLOR);
+}
+
+.header__ul{
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    list-style-type: none; /* this remove the point from the list */
+    display: flex; /* this make the list a row */
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+/* HERO */
+
+.hero{
+    position: relative; /* we use relative because we are going to put absolute inside the hero section */
+}
+
+.hero__h2{
+    background-color: var(--HERO-BGCOLOR);
+    color: var(--HERO-COLOR);
+    padding: 0.25em, 0.5em;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation: showWelcome 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes showWelcome {
+    0%{
+        top: -20%;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+
+    80%{
+        top: 30px;
+        transform: skew(10deg, -5deg) scaleY(1.2);
+    }
+
+    100%{
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaleY(1);
+    }
+}
 
