@@ -156,7 +156,7 @@ a:active{
 .hero__h2{
     background-color: var(--HERO-BGCOLOR);
     color: var(--HERO-COLOR);
-    padding: 0.25em, 0.5em;
+    padding: 0.25em, 0.2em;
     text-shadow: 2px 2px 5px var(--BORDER-COLOR);
     position: absolute;
     top: -100px;
@@ -181,3 +181,28 @@ a:active{
     }
 }
 
+/* FOOTER */
+
+.footer{
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    text-align: center;
+}
+
+/* MAIN */
+
+.main{
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.main__article{
+    scroll-behavior-top: 6.5rem;
+    margin: var(--MARGIN);
+}
+
+.main__article:first-child{
+    margin-top: 1em;
+}
