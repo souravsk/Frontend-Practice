@@ -56,6 +56,25 @@ input, button, textarea{
     --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
 }
 
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --BGCOLOR: rgb(0, 0, 0);
+        --BGCOLOR-FADE: gray;
+        --HEADER-COLOR: whitesmoke;
+        --NAV-BGCOLOR: rgb(20, 20, 20);
+        --HERO-COLOR:#333;
+        --BODY-BFCOLOR:#333;
+        --FONT-COLOR: whitesmoke;
+        --HIGHLIGHT-COLOR: whitesmoke;
+        --BORDER-COLOR: whitesmoke;
+        --LINK-COLOR:whitesmoke;
+        --LINK-HOVER:orange;
+        --LINK-ACTIVE:rgb(252, 200, 103);
+    }
+}
+
 /* UTILITY Classes */
 .offscreen{
     position: absolute;
