@@ -9,6 +9,19 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
+  //created an empty object to store the category and price of it.
+  const total_amount_by_category = {};
+  //then looping to each object in the transcatins array
+  for(let i = 0; i < transactions[i]; i++){
+    // creating a variable transcation and storing 
+    const transaction = transactions[i];
+    const {category, price} = transaction
+
+    if(total_amount_by_category[category]){
+
+    }
+
+  }
   return [];
 }
 
