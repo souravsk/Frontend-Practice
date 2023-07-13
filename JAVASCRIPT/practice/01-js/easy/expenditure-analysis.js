@@ -9,20 +9,37 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  //created an empty object to store the category and price of it.
-  const total_amount_by_category = {};
-  //then looping to each object in the transcatins array
-  for(let i = 0; i < transactions[i]; i++){
-    // creating a variable transcation and storing 
+  // creating an object that will store category and price
+  const totalAmountByCategory = {};
+  //loop to itreate over evert object in the array
+  for (let i = 0; i < transactions.length; i++) {
+    //creating a new object to store one object at a time 
     const transaction = transactions[i];
-    const {category, price} = transaction
+    //this is called destructuring where
+    //const { category, price } = transaction; is extracting the category and price properties from the transaction object and assigning their values to the variables category and price, respectively.
+    const { category, price } = transaction;
+    console.log(category, price)
+    //now check if the category is alredy they or not if it is there then we will add the amount to that category if not then add that new category and the add the amount.
 
-    if(total_amount_by_category[category]){
-
+    //so it is like key and value 
+    //ex- totalAmountByCategory[category] is not equal to Food : 20
+    if (totalAmountByCategory[category]) {
+    //and here it is adding to the value 
+      totalAmountByCategory[category] += price;
+    } else {
+      totalAmountByCategory[category] = price;
     }
-
   }
-  return [];
+
+  const result = [];
+  for (const category in totalAmountByCategory) {
+    result.push({
+      category: category,
+      totalSpent: totalAmountByCategory[category],
+    });
+  }
+
+  return result;
 }
 
 module.exports = calculateTotalSpentByCategory;
