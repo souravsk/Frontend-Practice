@@ -7,7 +7,17 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  //we have to remove the , . this this and make them lower case
+  var cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  var rev = '';
+  for(let i= cleanedStr.length - 1;i >= 0; i--){
+   rev += cleanedStr.charAt(i) 
+  }
+  if(cleanedStr === rev){
+    return true
+  } else {
+  return false;
+}
 }
 
-module.exports = isPalindrome;
+ module.exports = isPalindrome;
